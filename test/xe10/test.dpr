@@ -7,9 +7,14 @@ program test;
 
 uses
   ooRunTest,
-  ooColor.RGB_test in '..\code\ooColor.RGB_test.pas',
-  ooColor.RGB.Convert_test in '..\code\ooColor.RGB.Convert_test.pas',
-  ooColor.RGB.Hexadecimal_test in '..\code\ooColor.RGB.Hexadecimal_test.pas';
+  ooRGB_test in '..\code\ooRGB_test.pas',
+  ooRGBConvert_test in '..\code\ooRGBConvert_test.pas',
+  ooRGBHexadecimal_test in '..\code\ooRGBHexadecimal_test.pas',
+  ooRGBConvert in '..\..\code\ooRGBConvert.pas',
+  ooRGBGreyscale in '..\..\code\ooRGBGreyscale.pas',
+  ooRGBHexadecimal in '..\..\code\ooRGBHexadecimal.pas',
+  ooRGB in '..\..\code\ooRGB.pas',
+  ooRGBGreyscale_test in '..\code\ooRGBGreyscale_test.pas';
 
 {R *.RES}
 

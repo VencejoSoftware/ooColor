@@ -3,13 +3,13 @@
   Distributed under the terms of the Modified BSD License
   The full license is distributed with this software
 }
-unit ooColor.RGB_test;
+unit ooRGB_test;
 
 interface
 
 uses
   SysUtils,
-  ooColor.RGB,
+  ooRGB,
 {$IFDEF FPC}
   fpcunit, testregistry
 {$ELSE}

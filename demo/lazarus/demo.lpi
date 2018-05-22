@@ -15,9 +15,10 @@
       </Flags>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
-      <Title Value="test"/>
+      <Title Value="demo"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
     </General>
     <BuildModes Count="3">
       <Item1 Name="Default" Default="True"/>
@@ -27,7 +28,7 @@
           <PathDelim Value="\"/>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="$env(delphiooLib)\ooBatch\code;..\..\code;..\code"/>
+            <OtherUnitFiles Value="$env(delphi3rdParty)\generics.collections\src;$env(delphiooLib)\ooBatch\code;$env(delphiooLib)\ooGeneric\code;..\..\code;..\code\form"/>
             <UnitOutputDirectory Value="..\build\debug"/>
           </SearchPaths>
           <Parsing>
@@ -47,13 +48,16 @@
           </CodeGeneration>
           <Linking>
             <Debugging>
-              <DebugInfoType Value="dsDwarf2"/>
               <UseHeaptrc Value="True"/>
               <TrashVariables Value="True"/>
               <UseValgrind Value="True"/>
-              <StripSymbols Value="True"/>
               <UseExternalDbgSyms Value="True"/>
             </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
           </Linking>
           <Other>
             <CustomOptions Value="-dBorland -dVer150 -dDelphi7 -dCompiler6_Up -dPUREPASCAL -Xm"/>
@@ -66,7 +70,7 @@
           <PathDelim Value="\"/>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="$env(delphiooLib)\ooBatch\code;..\..\code;..\code"/>
+            <OtherUnitFiles Value="$env(delphi3rdParty)\generics.collections\src;$env(delphiooLib)\ooBatch\code;$env(delphiooLib)\ooGeneric\code;..\..\code;..\code\form"/>
             <UnitOutputDirectory Value="..\build\release"/>
           </SearchPaths>
           <Parsing>
@@ -116,43 +120,22 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="9">
+    <Units Count="3">
       <Unit0>
-        <Filename Value="test.lpr"/>
+        <Filename Value="demo.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="..\..\code\ooRGB.pas"/>
+        <Filename Value="..\code\form\MainForm.lfm"/>
         <IsPartOfProject Value="True"/>
       </Unit1>
       <Unit2>
-        <Filename Value="..\..\code\ooRGBConvert.pas"/>
+        <Filename Value="..\code\form\MainForm.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
       </Unit2>
-      <Unit3>
-        <Filename Value="..\..\code\ooRGBGreyscale.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit3>
-      <Unit4>
-        <Filename Value="..\..\code\ooRGBHexadecimal.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit4>
-      <Unit5>
-        <Filename Value="..\code\ooRGB_test.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit5>
-      <Unit6>
-        <Filename Value="..\code\ooRGBConvert_test.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit6>
-      <Unit7>
-        <Filename Value="..\code\ooRGBGreyscale_test.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit7>
-      <Unit8>
-        <Filename Value="..\code\ooRGBHexadecimal_test.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit8>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -160,7 +143,7 @@
     <PathDelim Value="\"/>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="$env(delphiooLib)\ooBatch\code;..\..\code;..\code"/>
+      <OtherUnitFiles Value="$env(delphi3rdParty)\generics.collections\src;$env(delphiooLib)\ooBatch\code;$env(delphiooLib)\ooGeneric\code;..\..\code;..\code\form"/>
       <UnitOutputDirectory Value="..\build\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>

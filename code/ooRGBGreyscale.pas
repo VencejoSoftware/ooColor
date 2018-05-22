@@ -1,12 +1,40 @@
-seguir
-unit ooColor.RGB.Greyscale;
+{$REGION 'documentation'}
+{
+  Copyright (c) 2018, Vencejo Software
+  Distributed under the terms of the Modified BSD License
+  The full license is distributed with this software
+}
+{
+  Greyscale of RGB color
+  @created(21/03/2018)
+  @author Vencejo Software <www.vencejosoft.com>
+}
+{$ENDREGION}
+unit ooRGBGreyscale;
 
 interface
 
 uses
-  ooColor.RGB;
+  ooRGB;
 
 type
+{$REGION 'documentation'}
+{
+  @abstract(Implementation of @link(IRGB))
+  Calculate a greyscale factor for RGB color
+  @member(Red @seealso(IRGB.Red))
+  @member(Green @seealso(IRGB.Green))
+  @member(Blue @seealso(IRGB.Blue))
+  @member(
+    Create Object constructor
+    @param(RGB RGB object to convert as greyscale)
+  )
+  @member(
+    New Create a new @classname as interface
+    @param(RGB RGB object to convert as greyscale)
+  )
+}
+{$ENDREGION}
   TRGBGreyscale = class sealed(TInterfacedObject, IRGB)
   strict private
     _Factor: Byte;

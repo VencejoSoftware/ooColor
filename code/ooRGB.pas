@@ -5,19 +5,19 @@
   The full license is distributed with this software
 }
 {
-  Red green and blue color representation
+  Red, green and blue color representation
   @created(21/03/2018)
   @author Vencejo Software <www.vencejosoft.com>
 }
 {$ENDREGION}
-unit ooColor.RGB;
+unit ooRGB;
 
 interface
 
 type
 {$REGION 'documentation'}
 {
-  @abstract(Red green and blue color representation)
+  @abstract(Red, green and blue color representation)
   @member(Red Red value)
   @member(Green Green value)
   @member(Blue Blue value)

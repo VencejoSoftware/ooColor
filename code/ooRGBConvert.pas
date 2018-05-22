@@ -10,13 +10,13 @@
   @author Vencejo Software <www.vencejosoft.com>
 }
 {$ENDREGION}
-unit ooColor.RGB.Convert;
+unit ooRGBConvert;
 
 interface
 
 uses
   Graphics,
-  ooColor.RGB;
+  ooRGB;
 
 type
 {$REGION 'documentation'}
@@ -46,29 +46,29 @@ type
 }
 {$ENDREGION}
 
-  IRGBConvertTColor = interface(IRGBConvert<TColor>)
+  IRGBTColor = interface(IRGBConvert<TColor>)
     ['{13805C76-7EF2-4094-8B4F-F9B9117300E9}']
   end;
 
 {$REGION 'documentation'}
 {
-  @abstract(Implementation of @link(IRGBConvertTColor))
-  @member(ToValue @seealso(IRGBConvertTColor.ToValue))
-  @member(FromValue @seealso(IRGBConvertTColor.FromValue))
+  @abstract(Implementation of @link(IRGBTColor))
+  @member(ToValue @seealso(IRGBTColor.ToValue))
+  @member(FromValue @seealso(IRGBTColor.FromValue))
   @member(New Create a new @classname as interface)
 }
 {$ENDREGION}
 
-  TRGBConvertTColor = class sealed(TInterfacedObject, IRGBConvertTColor)
+  TRGBTColor = class sealed(TInterfacedObject, IRGBTColor)
   public
     function ToValue(const RGB: IRGB): TColor;
     function FromValue(const Color: TColor): IRGB;
-    class function New: IRGBConvertTColor;
+    class function New: IRGBTColor;
   end;
 
 implementation
 
-function TRGBConvertTColor.FromValue(const Color: TColor): IRGB;
+function TRGBTColor.FromValue(const Color: TColor): IRGB;
 var
   SysColor: Longint;
 begin
@@ -76,14 +76,14 @@ begin
   Result := TRGB.New(Byte(SysColor), Byte(SysColor shr 8), Byte(SysColor shr 16));
 end;
 
-function TRGBConvertTColor.ToValue(const RGB: IRGB): TColor;
+function TRGBTColor.ToValue(const RGB: IRGB): TColor;
 begin
   Result := (RGB.Blue shl 16) or (RGB.Green shl 8) or RGB.Red;
 end;
 
-class function TRGBConvertTColor.New: IRGBConvertTColor;
+class function TRGBTColor.New: IRGBTColor;
 begin
-  Result := TRGBConvertTColor.Create;
+  Result := TRGBTColor.Create;
 end;
 
 end.
