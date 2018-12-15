@@ -122,35 +122,35 @@
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="..\..\code\ooRGB.pas"/>
+        <Filename Value="..\..\code\RGB.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit1>
       <Unit2>
-        <Filename Value="..\..\code\ooRGBConvert.pas"/>
+        <Filename Value="..\..\code\RGBConvert.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit2>
       <Unit3>
-        <Filename Value="..\..\code\ooRGBGreyscale.pas"/>
+        <Filename Value="..\..\code\RGBGreyscale.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit3>
       <Unit4>
-        <Filename Value="..\..\code\ooRGBHexadecimal.pas"/>
+        <Filename Value="..\..\code\RGBHexadecimal.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit4>
       <Unit5>
-        <Filename Value="..\code\ooRGB_test.pas"/>
+        <Filename Value="..\code\RGB_test.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit5>
       <Unit6>
-        <Filename Value="..\code\ooRGBConvert_test.pas"/>
+        <Filename Value="..\code\RGBConvert_test.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit6>
       <Unit7>
-        <Filename Value="..\code\ooRGBGreyscale_test.pas"/>
+        <Filename Value="..\code\RGBGreyscale_test.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit7>
       <Unit8>
-        <Filename Value="..\code\ooRGBHexadecimal_test.pas"/>
+        <Filename Value="..\code\RGBHexadecimal_test.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit8>
     </Units>

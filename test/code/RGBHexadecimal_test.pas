@@ -3,14 +3,14 @@
   Distributed under the terms of the Modified BSD License
   The full license is distributed with this software
 }
-unit ooRGBHexadecimal_test;
+unit RGBHexadecimal_test;
 
 interface
 
 uses
   SysUtils,
   Graphics,
-  ooRGB, ooRGBHexadecimal,
+  RGB, RGBHexadecimal,
 {$IFDEF FPC}
   fpcunit, testregistry
 {$ELSE}

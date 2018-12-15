@@ -6,15 +6,15 @@
 program test;
 
 uses
-  ooRunTest,
-  ooRGB_test in '..\code\ooRGB_test.pas',
-  ooRGBConvert_test in '..\code\ooRGBConvert_test.pas',
-  ooRGBHexadecimal_test in '..\code\ooRGBHexadecimal_test.pas',
-  ooRGBConvert in '..\..\code\ooRGBConvert.pas',
-  ooRGBGreyscale in '..\..\code\ooRGBGreyscale.pas',
-  ooRGBHexadecimal in '..\..\code\ooRGBHexadecimal.pas',
-  ooRGB in '..\..\code\ooRGB.pas',
-  ooRGBGreyscale_test in '..\code\ooRGBGreyscale_test.pas';
+  RunTest,
+  RGB_test in '..\code\RGB_test.pas',
+  RGBConvert_test in '..\code\RGBConvert_test.pas',
+  RGBHexadecimal_test in '..\code\RGBHexadecimal_test.pas',
+  RGBConvert in '..\..\code\RGBConvert.pas',
+  RGBGreyscale in '..\..\code\RGBGreyscale.pas',
+  RGBHexadecimal in '..\..\code\RGBHexadecimal.pas',
+  RGB in '..\..\code\RGB.pas',
+  RGBGreyscale_test in '..\code\RGBGreyscale_test.pas';
 
 {R *.RES}
 
