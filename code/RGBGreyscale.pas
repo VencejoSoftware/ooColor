@@ -10,12 +10,12 @@
   @author Vencejo Software <www.vencejosoft.com>
 }
 {$ENDREGION}
-unit ooRGBGreyscale;
+unit RGBGreyscale;
 
 interface
 
 uses
-  ooRGB;
+  RGB;
 
 type
 {$REGION 'documentation'}

@@ -10,13 +10,13 @@
   @author Vencejo Software <www.vencejosoft.com>
 }
 {$ENDREGION}
-unit ooRGBConvert;
+unit RGBConvert;
 
 interface
 
 uses
   Graphics,
-  ooRGB;
+  RGB;
 
 type
 {$REGION 'documentation'}

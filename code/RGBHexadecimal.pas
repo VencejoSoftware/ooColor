@@ -10,13 +10,13 @@
   @author Vencejo Software <www.vencejosoft.com>
 }
 {$ENDREGION}
-unit ooRGBHexadecimal;
+unit RGBHexadecimal;
 
 interface
 
 uses
   SysUtils,
-  ooRGB, ooRGBConvert;
+  RGB, RGBConvert;
 
 type
 {$REGION 'documentation'}
@@ -27,11 +27,17 @@ type
 {$REGION 'documentation'}
 {
   @abstract(Convert RGB to hexadecimal and viceversa interface)
+  @member(
+    FromStringValue Convert string value to RGB object
+    @param(Text String value)
+    @return(@link(IRGB RGB object))
+  )
 }
 {$ENDREGION}
 
   IRGBHexadecimal = interface(IRGBConvert<TColorHex>)
     ['{0E2AC56C-3E31-4AA2-BD0F-634E778342AF}']
+    function FromStringValue(const Text: AnsiString): IRGB;
   end;
 
 {$REGION 'documentation'}
@@ -39,6 +45,7 @@ type
   @abstract(Implementation of @link(IRGBHexadecimal))
   @member(ToValue @seealso(IRGBHexadecimal.ToValue))
   @member(FromValue @seealso(IRGBHexadecimal.FromValue))
+  @member(FromStringValue @seealso(IRGBHexadecimal.FromStringValue))
   @member(New Create a new @classname as interface)
 }
 {$ENDREGION}
@@ -47,14 +54,27 @@ type
   public
     function ToValue(const RGB: IRGB): TColorHex;
     function FromValue(const Hex: TColorHex): IRGB;
+    function FromStringValue(const Text: AnsiString): IRGB;
     class function New: IRGBHexadecimal;
   end;
 
 implementation
 
+function TRGBHexadecimal.FromStringValue(const Text: AnsiString): IRGB;
+var
+  Hex: TColorHex;
+begin
+  if Length(Text) < 1 then
+    Hex := '000000'
+  else
+    Move(Text[1], Hex[1], Length(Text) * sizeof(AnsiChar));
+  Result := FromValue(Hex);
+end;
+
 function TRGBHexadecimal.FromValue(const Hex: TColorHex): IRGB;
 begin
-  Result := TRGB.New(StrToInt('$' + Copy(Hex, 1, 2)), StrToInt('$' + Copy(Hex, 3, 2)), StrToInt('$' + Copy(Hex, 5, 2)));
+  Result := TRGB.New(StrToInt('$' + Copy(String(Hex), 1, 2)), StrToInt('$' + Copy(String(Hex), 3, 2)),
+    StrToInt('$' + Copy(String(Hex), 5, 2)));
 end;
 
 function TRGBHexadecimal.ToValue(const RGB: IRGB): TColorHex;

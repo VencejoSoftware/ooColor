@@ -5,7 +5,7 @@ interface
 uses
   Windows, SysUtils, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, StdCtrls,
-  ooRGB, ooRGBConvert, ooRGBGreyscale, ooRGBHexadecimal;
+  RGB, RGBConvert, RGBGreyscale, RGBHexadecimal;
 
 type
   TMainForm = class(TForm)

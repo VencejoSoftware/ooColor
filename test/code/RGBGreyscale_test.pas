@@ -3,14 +3,14 @@
   Distributed under the terms of the Modified BSD License
   The full license is distributed with this software
 }
-unit ooRGBGreyscale_test;
+unit RGBGreyscale_test;
 
 interface
 
 uses
   SysUtils,
-  ooRGB,
-  ooRGBGreyscale,
+  RGB,
+  RGBGreyscale,
 {$IFDEF FPC}
   fpcunit, testregistry
 {$ELSE}
